@@ -1,0 +1,20 @@
+.page {
+	height: 100%;
+}
+.display {
+  min-height: 375px;
+}
+.display-img {
+	width: 250px;
+	height: 375px;
+}
+.capital {
+	text-transform: capitalize;
+}
+.featuredContainer {
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  white-space: normal;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124574215-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-124574215-1');
+</script>
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta charset="utf-8">
+  <meta name="subject" content="movies">
+  <meta name="topic" content="Movies and television">
+  <meta name="summary" content="Download latest movies and tv shows, get direct download links and torrent search">
+  <meta name="designer" content="chalchitra">
+  <meta name="copyright" content="chalchitra">
+  <meta name="owner" content="chalchitra">
+  <meta property="og:image" content="http://chalchitratorrent.000webhostapp.com/i192.png"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://chalchitra.ga"/>
+    <meta property="og:title" content="Chalchitra | Free movies and TV"/>
+    <meta property="og:description" content="Free and ads free content of NETFLIX, Amazon Prime, HBO, Marvel and torrents all at one place"/>
+    <meta property="og:image:alt" content="Chalchitra logo"/>
+    <meta name="description" content="The easiest torrent search engine with all movies and TV shows">
+    <meta name="keywords" content="torrent,torrenting,yts,yify torrent, movies and tv,movies,latest movies,torrent search engine,best torrent client,best torrent,torrent search,search engine,best movies,categories,movies,television,tv shows,netflix, netflix in free">
+    <meta name="author" content="chalchitra">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#4286f4">
+  <title>Chalchitra Watch</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/DevSaurabhcb/sp.css@0.9/min/sp.min.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="../assets/common.css">
+  <link rel="stylesheet" type="text/css" href="../assets/player.css">
+</head>
+<body>
+<div class="material-nav" id="nav">
+  <div class="material-nav_header ripple">
+    <img src="../assets/background.png" class="material-nav_cover">
+    <img src="../assets/i128.png" class="material-nav_avatar">
+    <span class="material-nav_title">Chalchitra</span>
+  </div>
+  <div class="material-nav_content">
+    <div class="userInfoText"></div>
+    <div class="text-center">
+      <a class="text-black" href="../login" title="login" id="signurl"><button class="btn bg-steelblue shadow1 ripple" id="signbtn">Login or signup</button></a><hr>
+    </div>
+    <div class="material-list one-line-list icon-list divider-list">
+      <a class="text-black" href="../"><div class="list-item ripple-dark">
+        <i class="material-icons text-danger">home</i><div class="list-text">Home</div>
+      </div></a>
+      <a class="text-black" href="../account"><div class="list-item ripple-dark">
+        <i class="material-icons text-primary">person</i><div class="list-text">My account</div>
+      </div></a>
+      <a class="text-black" href="../search"><div class="list-item ripple-dark">
+        <i class="material-icons text-purple">search</i><div class="list-text">Search</div>
+      </div></a>
+      <a class="text-black" href="../tv"><div class="list-item ripple-dark">
+        <i class="material-icons text-orange">tv</i><div class="list-text">Television</div>
+      </div></a>
+      <a class="text-black" href="../search"><div class="list-item ripple-dark">
+        <i class="material-icons text-red">local_movies</i><div class="list-text">Torrent movies</div>
+      </div></a>
+      <a class="text-black" href="../about"><div class="list-item ripple-dark">
+        <i class="material-icons text-green">info</i><div class="list-text">About</div>
+      </div></a>
+      <a class="text-black" href="../contact"><div class="list-item ripple-dark">
+        <i class="material-icons text-brown">question_answer</i><div class="list-text">Contact</div>
+      </div></a>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="header bg-white shadow2 fixed">
+  <i class="material-icons material-nav_opener left-icon circle ripple-dark" data-target="nav" data-hover="bg-white darken1">menu</i>
+  <img src="../assets/i128.png" class="right-icon">
+  <span onclick="window.open('../','_self')">CHALCHITRA</span>
+  </div>
+  <div class="page" id="page">
+    <div class="searchBox block" id="searchBox">
+      <input type="search" name="q" id="search" class="search shadow2" placeholder="Search" onkeyup="doSearch()"/>
+    </div>
+    <div class="bg-primary lighten1 padding curved shadow2 text-center" style="font-size: 14px;" id="installappdiv">
+      Hey install our app for rich experience &nbsp;&nbsp;&nbsp;&nbsp;<button class="ripple btn bg-primary darken2 shadow1" id="installbutton">Install now</button>
+    </div><br>
+    <div class="playOnline padding text-center none"><a id="onlinePlayer" href=""><button class="btn bg-white text-red shadow2 ripple-dark">Play online now</button></a></div>
+  <br>
+  <div class="torrentInfo bg-success shadow1 curved"></div><br>
+  <div id="details" class="details bg-white shadow2 curved padding none">
+    <h2 class="someTitle text-center"></h2><hr>
+    <a href="" id="downloadLink"><button class="center btn btn-red clickable shadow1 ripple" id="downloadButton">Download</button></a><br>
+    <img src="" class="someImage shadow2 center" style="width: 200px;"/><hr>
+  <div class="info"></div>
+  <br>
+  </div><br>
+  <div class="more bg-white shadow2 padding curved featuredContainer" style="height: 260px">
+      <a><img class="featured-item-image"></a>
+      <a><img class="featured-item-image"></a>
+      <a><img class="featured-item-image"></a>
+      <a><img class="featured-item-image"></a>
+      <a><img class="featured-item-image"></a>
+      <a><img class="featured-item-image"></a>
+      <a><img class="featured-item-image"></a>
+  </div>
+  <br>
+  <div class="text-center bg-white shadow3 padding curved"><span class="font-2x text-pink">Love Chalchitra</span><br><a href="https://www.paypal.me/chalchitra"><button class="btn bg-indigo shadow2 ripple">Donate via Paypal</button></a>
+  </div><hr>
+  </div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/DevSaurabhcb/sp.css@0.9/min/sp.min.js"></script>
+<script src="../assets/common-fb.js"></script>
+<script src="../assets/player.js"></script>
+</body>
+</html>

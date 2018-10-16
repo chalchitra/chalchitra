@@ -1,0 +1,28 @@
+resume
+	user_email
+	tv
+		name_series_episode
+			time
+	movie
+		name
+			time
+	torrent
+		id
+			time
+movies
+	name
+		url
+		quality
+		description
+		image
+		type
+		date_added
+		subtitle
+tv
+	name
+		name
+		poster
+		seasons
+			season
+				episode: url
+				subtitle: url

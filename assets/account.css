@@ -1,0 +1,48 @@
+.userInfoCnt {
+	width: 280px;
+	padding: 16px;
+	background: white;
+	margin: 0 auto;
+	margin-top: 50px;
+	position: relative;
+}
+.userInfoCnt img {
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	position: absolute;
+	top: -40px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.textAndBtnCnt {
+	width: 248px;
+}
+.textAndBtnCnt .textCnt {
+	width: 200px;
+	display: inline-block;
+	float: left;
+	margin: 0;
+	margin-left: -16px;
+}
+.textAndBtnCnt .btnCnt {
+	width: 56px;
+	float: right;
+	display: inline-block;
+	margin: 0;
+	margin-right: -5px;
+	margin-top: 36.81px;
+}
+.upload-btn-wrapper {
+	position: relative;
+	height: 56px;
+}
+#photoInput {
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	height: 56px;
+	left: 0;
+	top: 0;
+	z-index: 2;
+}

@@ -1,0 +1,8 @@
+.page {
+	height: 100%;
+}
+.mIcon {
+	width: 100px;
+	height: 100px;
+	transform: rotate(-15deg);
+}

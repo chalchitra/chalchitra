@@ -1,0 +1,217 @@
+.videosubbar {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 400;
+  text-shadow: 0px 1px black;
+  pointer-events: none;
+  z-index: 2;
+}
+.videosubbar span {
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 0.0625em 0.25em;
+  display: inline-block;
+}
+.zero-opacity {
+  opacity: 0;
+  display: none;
+}
+.wrapper {
+  width: 300px;
+  height: 168.75px;
+}
+#output {
+  width: 100%;
+  height: 100%;
+  background: #121212;
+}
+#output video {
+  width: 100%;
+  height: 100%;
+}
+#output .v-tools {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  transition: opacity 0.2s linear;
+}
+.doubleClickPanel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  overflow: hidden;
+}
+.currentTime, .remainingTime {
+  width: auto;
+  height: 12px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  font-size: 12px;
+  line-height: 12px;
+  position: absolute;
+  bottom: 10px;
+  left: 2%;
+  z-index: 10;
+  font-weight: 500;
+}
+.remainingTime {
+  left: unset;
+  right: 2%;
+}
+.progressBar {
+  width: 80%;
+  height: 10px;
+  background: white;
+  position: absolute;
+  z-index: 2;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px double grey;
+}
+.bufferedBar {
+  width: 80%;
+  height: 8px;
+  background: #ddd;
+  position: absolute;
+  z-index: 3;
+  bottom: 11px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.progressedBarDisplay {
+  width: 0;
+  position: absolute;
+  z-index: 4;
+  bottom: 11px;
+  height: 8px;
+  background: red;
+  left: 10%;
+}
+.progressedBar {
+ -webkit-appearance: none;
+  appearance: none;
+  width: 80%!important;
+  position: absolute;
+  z-index: 5;
+  bottom: 11px;
+  height: 8px;
+  background: transparent;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.progressedBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2px;
+    height: 8px;
+    cursor: pointer;
+    background: #000;
+    transition: 0.1s ease-in all;
+}
+.progressedBar::-moz-range-thumb {
+    width: 2px;
+    height: 8px;
+    cursor: pointer;
+    background: #000;
+}
+.playpause, .fullscreen, .mute, .minusTen, .plusTen, .caption {
+  padding: none!important;
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  color: black;
+  background: rgba(255,255,255,0.8);
+  border: none;
+  border-radius: 100%;
+  height: 56px;
+  width: 56px;
+  line-height: 56px;
+  text-align: center;
+  font-size: 30px;
+}
+.fullscreen {
+  left: unset;
+  right: 5px;
+  top: 0;
+  transform: none;
+}
+.mute {
+  left: unset;
+  right: 66px;
+  top: 0;
+  transform: none;
+}
+.minusTen {
+  left: calc(50% - 60px);
+}
+.plusTen {
+  left: calc(50% + 60px);
+}
+.caption {
+  left: unset;
+  right: 0px;
+  color: red;
+}
+.volumeCnt {
+  position: absolute;
+  z-index: 10;
+  width: 100px!important;
+  transform: rotate(-90deg);
+  bottom: 40%;
+  left: 0;
+  background: rgba(255,255,255,0.7);
+  border-radius: 4px;
+  padding: 4px;
+  height: 20px;
+  line-height: 20px;
+}
+.volume {
+  position: absolute;
+  z-index: 11;
+  width: 90px!important;
+  bottom: 45%;
+  left: 4px;
+}
+.time,.go {
+  position: absolute;
+  z-index: 5;
+  width: 35px;
+  height: 35px;
+  border-radius: 2px;
+  background: #fff;
+  color: #222;
+  line-height: 35px;
+  text-align: center;
+  font-size: 12px;
+  top: 5px;
+  border: none;
+  font-weight: 600;
+}
+.time#hour {
+left: 5px;
+}
+#minutes {
+  left: 45px;
+}
+#seconds {
+  left: 85px;
+}
+.go {
+  left: 125px;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signing you out - Chalchitra</title>
+</head>
+<body>
+	Please wait...<br>This might take a few seconds and a few more depending on your connection speed
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
+<script>
+var config = {
+    apiKey: "AIzaSyDxzxqDixtLYcEHsDlT87M2UazppFYt104",
+    authDomain: "chalchitrausers.firebaseapp.com",
+    databaseURL: "https://chalchitrausers.firebaseio.com",
+    projectId: "chalchitrausers",
+    storageBucket: "",
+    messagingSenderId: "618607089827"
+  };
+firebase.initializeApp(config);
+firebase.auth().signOut().then(function() {
+  window.open(window.history.go(-1));
+}, function(error) {
+  window.open(window.history.go(-1));
+});
+</script>
+</body>
+</html>
