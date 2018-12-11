@@ -188,6 +188,3 @@
     stroke: #ffa700;
   }
 }
-div#todelete + div {
-  display: none!important;
-}
