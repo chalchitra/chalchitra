@@ -14,6 +14,7 @@ var moreCnt = document.querySelector(".more");
 var playOnlineCnt = document.querySelector(".playOnline");
 var playOnline = document.querySelector("#onlinePlayer");
 var detailsCnt = document.querySelector("#details");
+var vdcnt = document.querySelector("#thecntofvd");
 var __details;
 var currentTime = 0;
 var queriesDone = 0;
@@ -103,7 +104,7 @@ if (id != "" && magnet != "" && type == "torrent"){
 }
 }
 function manipulateTV(){
-  playOnline.href = "http://saurabh.gq/play.php?u="+dataTV[name].seasons[season].episodes[episode];
+  playOnline.href = "play.php?u="+dataTV[name].seasons[season].episodes[episode];
   moreCnt.innerHTML = "";
   for(var series in dataTV){
         var img = document.createElement("img");
@@ -118,7 +119,15 @@ function manipulateTV(){
   var _name = _o.name;
   var _poster = _o.poster;
   var _seasons = _o.seasons;
-  titleCnt.innerHTML = _name + " S" + season + " : E" + parseInt(episode.replace("e",""));
+  var _vd = document.createElement("video");
+  _vd.id = "player";
+  _vd.src = dataTV[name].seasons[season].episodes[episode];
+  _vd.setAttribute("type","video/mp4");
+  _vd.setAttribute("controls","controls");
+  _vd.autoplay = true;
+  vdcnt.appendChild(_vd);
+  const player = new Plyr('#player');
+  titleCnt.innerHTML = _name + " S" + season + " : E" + pad(parseInt(episode.replace("e",""))+1);
   imageCnt.src = _poster;
   playOnlineCnt.classList.remove("none");
   detailsCnt.classList.remove("none");
@@ -129,13 +138,21 @@ function manipulateTV(){
   infoCnt.appendChild(list);
   for(var i = 1; i < _seasons.length; i++){
     for(var _episode in _seasons[i].episodes){
-      list.innerHTML += "<div class='list-item text-center bg-black capital'><a class='text-white ripple' href='../watch?t=tv&s="+i+"&e="+_episode+"&n="+name+"'>S"+i+" : E"+(parseInt(_episode.replace("e","")) + 1)+"</a></div>";
+      list.innerHTML += "<div class='list-item text-center bg-black capital'><a class='text-white ripple' href='../watch?t=tv&s="+i+"&e="+_episode+"&n="+name+"'>S"+pad(i)+" : E"+pad((parseInt(_episode.replace("e","")) + 1))+"</a></div>";
     }
   }
 }
 function manipulateMovie(){
-  playOnline.href = "http://saurabh.gq/play.php?u="+dataDirectMovies[name].url;
+  playOnline.href = "play.php?u="+dataDirectMovies[name].url;
   titleCnt.innerHTML = name;
+  var _vd = document.createElement("video");
+  _vd.src = dataDirectMovies[name].url;
+  _vd.autoplay = true;
+  _vd.controls = true;
+  _vd.type = "video/mp4";
+  _vd.id = "player";
+  vdcnt.appendChild(_vd);
+  const player = new Plyr('#player');
   infoCnt.innerHTML = dataDirectMovies[name].description;
   imageCnt.src = dataDirectMovies[name].image;
   downloadLink.href = dataDirectMovies[name].url;
@@ -171,4 +188,7 @@ function doSearch(e){
   if (e.keyCode == 13){
     window.location = document.location.origin + '/search/?q='+ e.target.value;
   }
+}
+function pad(d) {
+    return (d < 10) ? '0' + d.toString() : d.toString();
 }

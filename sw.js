@@ -1,15 +1,12 @@
 var urlsToCache = [
-  'assets/background.png',
   'assets/common-fb.js',
   'assets/home.js',
   'assets/common.css',
-  'assets/i128.png',
   'assets/IMDb.png',
-  'assets/play-min.png',
   'assets/player.css',
   'assets/player.js',
   'assets/search.css',
-  'assets/dev.jpg',
+  'assets/DEV.jpg',
   'assets/star.png',
   'assets/torrent.png',
   'assets/account.js',
@@ -17,7 +14,6 @@ var urlsToCache = [
   'assets/download.png',
   'assets/tv.css',
   'assets/tv.js',
-  'assets/videosub-0.9.9.js',
   'assets/writer.js',
   'assets/main.css',
   'assets/main.js',
@@ -29,10 +25,10 @@ var urlsToCache = [
   'watch/index.html',
   'index.html',
   'favicon.ico',
-  'https://rawgit.com/DevSaurabhcb/sp.css/master/min/sp.min.css',
-  'https://rawgit.com/DevSaurabhcb/sp.css/master/min/sp.min.js'
+  'https://cdn.jsdelivr.net/gh/DevSaurabhcb/sp.css@1.0.2/min/sp.min.css',
+  'https://cdn.jsdelivr.net/gh/DevSaurabhcb/sp.css@1.0.2/min/sp.min.js'
 ];
-var CACHE_NAME = "files_v1";
+var CACHE_NAME = "files_v2";
 self.addEventListener('install', function(event){
   event.waitUntil(
     caches.open(CACHE_NAME)

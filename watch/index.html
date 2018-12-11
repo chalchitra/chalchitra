@@ -8,7 +8,7 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-124574215-1');
-</script>
+</script><script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5be44e9afca3ce00111502f6&product=sticky-share-buttons"></script>
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <meta charset="utf-8">
   <meta name="subject" content="movies">
@@ -17,7 +17,7 @@
   <meta name="designer" content="chalchitra">
   <meta name="copyright" content="chalchitra">
   <meta name="owner" content="chalchitra">
-  <meta property="og:image" content="http://chalchitratorrent.000webhostapp.com/i192.png"/>
+  <meta property="og:image" content="http://chalchitratorrent.000webhostapp.com/assets/i192.png"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://chalchitra.ga"/>
     <meta property="og:title" content="Chalchitra | Free movies and TV"/>
@@ -29,7 +29,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <meta name="theme-color" content="#4286f4">
   <title>Chalchitra Watch</title>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/DevSaurabhcb/sp.css@0.9/min/sp.min.css">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.4.7/plyr.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/DevSaurabhcb/sp.css@1.0.2/min/sp.min.css">
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
   <link rel="stylesheet" type="text/css" href="../assets/common.css">
   <link rel="stylesheet" type="text/css" href="../assets/player.css">
@@ -47,6 +48,9 @@
       <a class="text-black" href="../login" title="login" id="signurl"><button class="btn bg-steelblue shadow1 ripple" id="signbtn">Login or signup</button></a><hr>
     </div>
     <div class="material-list one-line-list icon-list divider-list">
+      <a class="text-black" href="https://www.facebook.com/chalchitraGA/"><div class="list-item ripple-dark">
+        <img class="icon" style="width: 24px; height: 24px;" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/F_icon.svg"><div class="list-text">Like on facebook</div>
+      </div></a>
       <a class="text-black" href="../"><div class="list-item ripple-dark">
         <i class="material-icons text-danger">home</i><div class="list-text">Home</div>
       </div></a>
@@ -69,6 +73,14 @@
         <i class="material-icons text-brown">question_answer</i><div class="list-text">Contact</div>
       </div></a>
     </div>
+    <div class="material-list one-line-list">
+      <a class="text-black" href="../editors"><div class="list-item ripple-dark"><div class="list-text">Editor's picks</div>
+      </div></a>
+      <a class="text-black" href="../news"><div class="list-item ripple-dark"><div class="list-text">News</div>
+      </div></a>
+      <a class="text-black" href="../trending"><div class="list-item ripple-dark"><div class="list-text">Trending</div>
+      </div></a>
+    </div>
   </div>
 </div>
 <div class="container">
@@ -84,12 +96,15 @@
     <div class="bg-primary lighten1 padding curved shadow2 text-center" style="font-size: 14px;" id="installappdiv">
       Hey install our app for rich experience &nbsp;&nbsp;&nbsp;&nbsp;<button class="ripple btn bg-primary darken2 shadow1" id="installbutton">Install now</button>
     </div><br>
-    <div class="playOnline padding text-center none"><a id="onlinePlayer" href=""><button class="btn bg-white text-red shadow2 ripple-dark">Play online now</button></a></div>
+    <div class="playOnline padding text-center none"><a id="onlinePlayer" href="" target="_blank"><button class="btn bg-danger shadow2 ripple">Play in new tab if failed here</button></a></div>
+  <br>
+  <div id="thecntofvd" class="text-center center">
+  </div>
   <br>
   <div class="torrentInfo bg-success shadow1 curved"></div><br>
   <div id="details" class="details bg-white shadow2 curved padding none">
     <h2 class="someTitle text-center"></h2><hr>
-    <a href="" id="downloadLink"><button class="center btn btn-red clickable shadow1 ripple" id="downloadButton">Download</button></a><br>
+    <a href="" id="downloadLink" download><button class="center btn btn-red clickable shadow1 ripple" id="downloadButton">Download</button></a><br>
     <img src="" class="someImage shadow2 center" style="width: 200px;"/><hr>
   <div class="info"></div>
   <br>
@@ -111,8 +126,10 @@
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/DevSaurabhcb/sp.css@0.9/min/sp.min.js"></script>
+<script src="https://cdn.plyr.io/3.4.7/plyr.polyfilled.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/DevSaurabhcb/sp.css@1.0.2/min/sp.min.js"></script>
 <script src="../assets/common-fb.js"></script>
 <script src="../assets/player.js"></script>
+<div id="todelete"></div>
 </body>
 </html>

@@ -29,29 +29,29 @@ function fbScriptInit(){
 				var task = ref.child(file.name).put(file, metadata);
 				task.then(function(snapshot){return snapshot.ref.getDownloadURL();})
 					.then(function(url){
-						$().createToast("Uploading",{background:'green',color:'white'});
+						$().createDialog("Uploading",{background:'green',color:'white'});
 					    _photo.src = url;
 					    user.updateProfile({
 						  photoURL: url
 						}).then(function() {
-						 	$().createToast("Success! Profile picture changed");
+						 	$().createDialog("Success! Profile picture changed");
 						}).catch(function(error) {
 							console.log(error);
-							$().createToast("An error occured while updating!",2,{background:'red',color:'white'});
+							$().createDialog("An error occured while updating!",2,{background:'red',color:'white'});
 						});
 					})
 					.catch(function(error){
 						console.log(error);
-						$().createToast("An error occured while uploading!",2,{background:'red',color:'white'});
+						$().createDialog("An error occured while uploading!",2,{background:'red',color:'white'});
 					});
 			});
 			namebtn.addEventListener('click',function(){
 				user.updateProfile({
 					  displayName: _name.value,
 					}).then(function() {
-						$().createToast("Success! Name changed");
+						$().createDialog("Success! Name changed");
 					}).catch(function() {
-						$().createToast("An error occured!",2,{background:'red',color:'white'});
+						$().createDialog("An error occured!",2,{background:'red',color:'white'});
 					});
 			});
 			emailbtn.addEventListener('click',function(){
@@ -60,13 +60,13 @@ function fbScriptInit(){
 					var credential = firebase.auth.EmailAuthProvider.credential(user.email,pssd);
 					user.reauthenticateAndRetrieveDataWithCredential(credential).then(function() {
 					user.updateEmail(_email.value).then(function() {
-						$().createToast("Success! Email changed");
+						$().createDialog("Success! Email changed");
 						setTimeout(function(){document.location.reload();},1000);
 					}).catch(function() {
-						$().createToast("An error occured!",2,{background:'red',color:'white'});
+						$().createDialog("An error occured!",2,{background:'red',color:'white'});
 					});
 				}).catch(function() {
-					$().createToast("An error occured!",2,{background:'red',color:'white'});
+					$().createDialog("An error occured!",2,{background:'red',color:'white'});
 				});
 				}},false);
 			});
@@ -77,13 +77,13 @@ function fbScriptInit(){
 					var credential = firebase.auth.EmailAuthProvider.credential(user.email,pssd);
 					user.reauthenticateAndRetrieveDataWithCredential(credential).then(function() {
 					user.delete().then(function(){
-						$().createToast("Success! Account deleted");
+						$().createDialog("Success! Account deleted");
 						setTimeout(function(){document.location.reload();},1000);
 					}).catch(function() {
-						$().createToast("An error occured!",2,{background:'red',color:'white'});
+						$().createDialog("An error occured!",2,{background:'red',color:'white'});
 					});
 				}).catch(function() {
-					$().createToast("An error occured!",2,{background:'red',color:'white'});
+					$().createDialog("An error occured!",2,{background:'red',color:'white'});
 				});
 				}},false);
 				}});

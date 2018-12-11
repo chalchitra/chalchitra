@@ -24,3 +24,17 @@ function fbScriptInit(){
 		}
 	}
 }
+
+var _h = document.getElementById('header');
+var _hi = document.getElementById('heroimg');
+var _he = $(_hi).height();
+window.addEventListener("scroll",function(){
+	if(window.pageYOffset >= 50 && $(_h).hasClass("bg-white") != true){
+		$(_h).addClass("bg-white shadow3");
+		$(_h).removeClass("text-white");
+	}
+	else if(window.pageYOffset < 50 && $(_h).hasClass("bg-white") == true){
+		$(_h).removeClass("bg-white shadow3");
+		$(_h).addClass("text-white");
+	}
+});

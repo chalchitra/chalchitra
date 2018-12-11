@@ -48,7 +48,7 @@ var doneQueries = 0;
 			}
 			_listMovies();
 		  });
-		$().createToast('Loading the content, please wait',4);
+		$().createSnackbar('Loading the content, please wait',4);
 	}
 }());
 
@@ -159,7 +159,7 @@ function _listMovies(){
  }
     
     if (__movie_count == 0){
-    	$().createToast("No torrents found",3,{bottom:'50px',width:'80%',background:'red',color:'white'});
+    	$().createSnackbar("No torrents found",3,{bottom:'50px',width:'80%',background:'red',color:'white'});
     }
 }
 
@@ -201,7 +201,7 @@ function showMovieInfo(ele){
 function renderMovieDetails(){
 	_pageY.push(window.pageYOffset);
 	window.scrollTo(0,0);
-	$().createToast('Loading the content',4,{background:'white',color:'black',borderRadius:'4px',width:'80%',bottom:'50px',animate:'fade'});
+	$().createSnackbar('Loading the content',4,{background:'white',color:'black',borderRadius:'4px',width:'80%',bottom:'50px',animate:'fade'});
 	$("#searchBox").replaceClass("block","none");
 	$("#scrollBox").replaceClass("block","none");
 	$("#featured").replaceClass("block","none");
@@ -260,14 +260,14 @@ if((window.pageYOffset + window.innerHeight) >= (document.body.scrollHeight
 	.then(function(myJson){
 		if (typeof myJson.data.movies == 'undefined') {
 			dataMoviesLoaded = [];
-			$().createToast("No more torrents found",3,{bottom:'50px',width:'80%',background:'red',color:'white'});
+			$().createSnackbar("No more torrents found",3,{bottom:'50px',width:'80%',background:'red',color:'white'});
 			shallStop = true;
 		}
 		else {
 			_pageY.push(window.pageYOffset);
 			dataMovies = dataMovies.concat(myJson.data.movies);
 			dataMoviesLoaded = myJson.data.movies;
-			$().createToast("Loading more",0.5);
+			$().createSnackbar("Loading more",0.5);
 		}
 		_listMovies();
 	});

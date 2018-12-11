@@ -37,7 +37,7 @@ function fbScriptInit(){
 			var list = document.getElementById('list');
 			for(var i = 1; i < seasons.length; i++){
 				for(var episode in seasons[i].episodes){
-					list.innerHTML += "<div class='list-item text-center bg-black capital'><a class='text-white ripple' href='../watch?t=tv&s="+i+"&e="+episode+"&n="+name+"'>S"+i+" : E"+(parseInt(episode.replace("e","")) + 1)+"</a></div>";
+					list.innerHTML += "<div class='list-item text-center bg-black capital'><a class='text-white ripple' href='../watch?t=tv&s="+i+"&e="+episode+"&n="+name+"'>S"+pad(i)+" : E"+pad((parseInt(episode.replace("e","")) + 1))+"</a></div>";
 				};
 			}
 				
@@ -53,4 +53,7 @@ function doSearch(e){
 	if (e.keyCode == 13){
 		window.location = document.location.origin + '/search/?q='+ e.target.value;
 	}
+}
+function pad(d) {
+    return (d < 10) ? '0' + d.toString() : d.toString();
 }

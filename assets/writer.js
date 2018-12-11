@@ -23,9 +23,9 @@ document.getElementById("addMovieButton").addEventListener("click",function(){
   },function(error) {
     if (error) {
       console.log("error : ",error);
-      $().createToast("Failed to added",2,{background:'red',color:'white',borderRadius:'4px',width:'80%'});
+      $().createSnackbar("Failed to added",2,{background:'red',color:'white',borderRadius:'4px',width:'80%'});
     } else {
-      $().createToast("Successfully added",2);
+      $().createSnackbar("Successfully added",2);
       _name.value = _url.value = _quality.value = _description.value = _image.value = _type.value = _subtitle.value = "";
     }
   });
@@ -75,7 +75,7 @@ document.getElementById("tvEnabler").addEventListener("click",function(){
         <span class="bar"></span>
         <label for="${i}">Episode ${i+1} URL</label>
       </div>
-      <div class="material-input blue padding">
+      <div class="material-input blue padding none">
         <input type="text" required="required" onkeyup="addToSubtitles()" id="s${i}" name="subtitle${i}" data-subtitle="${i}">
         <span class="bar"></span>
         <label for="s${i}">Subtitle ${i+1} URL</label>

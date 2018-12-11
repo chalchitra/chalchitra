@@ -1,13 +1,3 @@
-if(document.location.pathname != "/watch/"){
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/sw.js').then(function(registration) {
-    }, function(err) {
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-}
 var config = {
     apiKey: "AIzaSyDxzxqDixtLYcEHsDlT87M2UazppFYt104",
     authDomain: "chalchitrausers.firebaseapp.com",
@@ -68,4 +58,40 @@ document.getElementById("installbutton").addEventListener("click",function(){
 }
 window.addEventListener('appinstalled', (evt) => {
   document.getElementById("installappdiv").style.display = "none";
+});
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+function checkCookie() {
+    var d = getCookie("fbdialog");
+    if (d == "") {
+        return true;
+    } else {
+        return false;
+    }
+}
+if (checkCookie()){
+  setCookie("fbdialog","shown",6);
+  $().createDialog({title:'Like us on facebook',text:'Did you love Chalchitra. Support it with your like and comments.',button1:'Like Now',button2:'No',action1:'https://facebook.com/chalchitraGA',action2:'cancel'},false);
+}
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelector("div#todelete + div").parentElement.removeChild(document.querySelector("div#todelete + div"));
 });

@@ -8,14 +8,15 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-124574215-1');
-</script><meta charset="utf-8">
+</script><script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5be44e9afca3ce00111502f6&product=sticky-share-buttons"></script>
+<meta charset="utf-8">
 	<meta name="subject" content="movies">
 	<meta name="topic" content="Movies and television">
 	<meta name="summary" content="Download latest movies and tv shows, get direct download links and torrent search">
 	<meta name="designer" content="chalchitra">
 	<meta name="copyright" content="chalchitra">
 	<meta name="owner" content="chalchitra">
-	<meta property="og:image" content="http://chalchitra.ga/assets/i128.png"/>
+	<meta property="og:image" content="http://chalchitra.ga/assets/i192.png"/>
 	<meta property="og:type" content="image/png"/>
   	<meta name="description" content="The easiest torrent search engine with all movies and TV shows">
   	<meta name="keywords" content="torrent,torrenting,yts,yify torrent, movies and tv,movies,latest movies,torrent search engine,best torrent client,best torrent,torrent search,search engine,best movies,categories,movies,television,tv shows,netflix, netflix in free">
@@ -23,19 +24,21 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
   	<meta name="theme-color" content="#4286f4">
 	<title>Chalchitra Login and Signup</title>
-	<link rel="stylesheet" type="text/css" href="https://rawgit.com/DevSaurabhcb/sp.css/master/min/sp.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/DevSaurabhcb/sp.css@1.0.2/min/sp.min.css">
   	<link rel="stylesheet" type="text/css" href="../assets/common.css">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon" />
 	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.3.0/firebaseui.css" />
   <link rel="manifest" href="../webapp.manifest" />
 </head>
 <body>
-<div class="container padding bg-white margin shadow3">
-	<img src="../assets/i256.png" class="block center"/><hr>
+<div class="container" style="background: white!important">
+  <div class="padding bg-white margin shadow3 curved">
+	<img src="../assets/i128.png" class="block center"/><hr>
 	<h1 class="text-center">LOGIN OR SIGNUP</h1><h2 class="text-red text-center">IT'S FREE</h2>
 	<p class="text-center">To create an account simply click LOGIN button, give your email address, choose a password and you are ready to go!</p>
 	<hr>
 	<div id="firebaseui-auth-container"></div><hr>
+</div>
 </div>
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
@@ -64,5 +67,6 @@
       var ui = new firebaseui.auth.AuthUI(firebase.auth());
       ui.start('#firebaseui-auth-container', uiConfig);
 </script>
+<div id="todelete"></div>
 </body>
 </html>
