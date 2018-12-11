@@ -104,7 +104,7 @@ if (id != "" && magnet != "" && type == "torrent"){
 }
 }
 function manipulateTV(){
-  playOnline.href = "play.php?u="+dataTV[name].seasons[season].episodes[episode];
+  playOnline.href = "http://chalchitratorrent.000webhostapp.com/watch/play.php?u="+dataTV[name].seasons[season].episodes[episode];
   moreCnt.innerHTML = "";
   for(var series in dataTV){
         var img = document.createElement("img");
@@ -121,6 +121,7 @@ function manipulateTV(){
   var _seasons = _o.seasons;
   var _vd = document.createElement("video");
   _vd.id = "player";
+  _vd.crossOrigin = true;
   _vd.src = dataTV[name].seasons[season].episodes[episode];
   _vd.setAttribute("type","video/mp4");
   _vd.setAttribute("controls","controls");
@@ -143,7 +144,7 @@ function manipulateTV(){
   }
 }
 function manipulateMovie(){
-  playOnline.href = "play.php?u="+dataDirectMovies[name].url;
+  playOnline.href = "http://chalchitratorrent.000webhostapp.com/watch/play.php?u="+dataDirectMovies[name].url;
   titleCnt.innerHTML = name;
   var _vd = document.createElement("video");
   _vd.src = dataDirectMovies[name].url;
@@ -151,6 +152,7 @@ function manipulateMovie(){
   _vd.controls = true;
   _vd.type = "video/mp4";
   _vd.id = "player";
+  _vd.crossOrigin = true;
   vdcnt.appendChild(_vd);
   const player = new Plyr('#player');
   infoCnt.innerHTML = dataDirectMovies[name].description;
